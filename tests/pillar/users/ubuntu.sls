@@ -1,4 +1,3 @@
-info: Ubuntu pillar data
 canonical:
   user.present:
     - fullname: Canonical
@@ -10,17 +9,12 @@ canonical:
       - wheel
       - storage
       - games
-  sudouser: True
-  sudo_rules:
-      - ALL=(root) /usr/bin/find
-      - ALL=(otheruser) /usr/bin/script.sh
-  sudo_defaults:
-      - '!requiretty'
 
-redhat:
-  user.absent
+redhat: user.absent
 
 sshkeys:
   ssh_auth.present:
     - user: canonical
-    - source: salt://ubuntu.pem
+    - source: salt://salt-formula-users/tests/ubuntu.pem
+    - config: '%h/.ssh/authorized_keys'
+

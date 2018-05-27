@@ -1,5 +1,7 @@
 base:
-  'G@os:CentOS':
+  'os:CentOS':
+    - match: grain
     - users.centos
-  'G@os:Ubuntu':
+  'os:Ubuntu':
+    - match: grain
     - users.ubuntu
