@@ -9,6 +9,7 @@ canonical:
       - wheel
       - storage
       - games
+    - sudo: true
 
 redhat: user.absent
 
