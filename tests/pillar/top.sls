@@ -2,6 +2,8 @@ base:
   'os:CentOS':
     - match: grain
     - users.centos
-  'os:Ubuntu':
+   'os:Ubuntu':
     - match: grain
     - users.ubuntu
+    
+
