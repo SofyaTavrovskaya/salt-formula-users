@@ -1,3 +1,3 @@
 base:
   '*':
-    - users
+    - tests.pillar.users.init
