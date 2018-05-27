@@ -6,23 +6,24 @@ State ``users_absent`` has ``name`` as argument and delete user on the minion
 
 State ``user`` creates user and has such arguments:
 
-``name``, ``shell``, ``home`` - strings defining username, shell and home catalog   
+* ``name``, ``shell``, ``home`` - strings defining username, shell and home catalog   
 
-``uid``, ``gid`` -  integer-typed numbers of user and group IDs
+* ``uid``, ``gid`` -  integer-typed numbers of user and group IDs
 
-``groups`` - list of groups to add user to them
+* ``groups`` - list of groups to add user to them
 
-``ssh-auth`` - list of plain-text SSH public keys for user
+* ``ssh-auth`` - list of plain-text SSH public keys for user
 
-``ssh_prv_key`` - list of private key files to install for newly created user
+* ``ssh_prv_key`` - list of private key files to install for newly created user
 
-``ssh-keys`` - filename-content  key-value pairs which are imported as-is to files in ~/.ssh 
+* ``ssh-keys`` - filename-content  key-value pairs which are imported as-is to files in ~/.ssh 
  
-``sudouser`` - True/False value if user should have sudo ability
+* ``sudouser`` - True/False value if user should have sudo ability
 
 
 State example:
 =========================
+    #ubuntu.yml
 
      users:
         user:    
