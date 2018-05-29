@@ -1,8 +1,5 @@
 include:
-{% if pillar.users.ubuntu is defined %}
-- ubuntu.users
+{% if pillar.users is defined %}
+- users.manage_users
 {% endif %}
 
-{% if pillar.users.centos is defined %}
-- centos.users
-{% endif %}
